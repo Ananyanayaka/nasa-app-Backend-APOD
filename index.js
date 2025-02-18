@@ -4,7 +4,9 @@ const cors = require('cors');
 require('dotenv').config(); // For securely accessing the API key
 
 const app = express();
-const port = 5000;
+
+// Use the Heroku-provided port or default to 5000 for local development
+const port = process.env.PORT || 5000; 
 
 // Enable CORS to allow communication between frontend and backend
 app.use(cors());
@@ -28,7 +30,7 @@ app.get('/api/apod', async (req, res) => {
   }
 });
 
-// Start the backend server
+// Start the backend server on the dynamic port provided by Heroku
 app.listen(port, () => {
   console.log(`Backend running on http://localhost:${port}`);
 });
