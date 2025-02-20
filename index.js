@@ -1,14 +1,14 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
-require('dotenv').config(); // For securely accessing the API key
+require('dotenv').config(); 
 
 const app = express();
 
-// Use the Heroku-provided port or default to 5000 for local development
+
 const port = process.env.PORT || 5000; 
 
-// Enable CORS to allow communication between frontend and backend
+
 app.use(cors());
 
 // NASA API Key (stored securely in .env file)
