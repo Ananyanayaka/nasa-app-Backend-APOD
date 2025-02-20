@@ -16,9 +16,7 @@ This project is a backend server built using **Node.js** and **Express** to fetc
 /nasa-backend-apod
   ├── /node_modules       # Backend dependencies
   ├── /src
-    ├── /routes           # API routes for the backend
-    ├── /controllers      # Logic to handle API requests
-    ├── server.js         # Main server file to set up Express
+    ├── index.js         # Main server file to set up Express
   ├── package.json        # Backend dependencies and metadata
   ├── .env                # Environment variables (for sensitive data like API key)
   ├── README.md           # Backend documentation
@@ -54,13 +52,23 @@ Create a `.env` file in the root directory of the project and add your **NASA AP
 ```env
 NASA_API_KEY=your-nasa-api-key
 ```
+## How to Get a NASA API Key
+
+To interact with NASA's APIs, you'll need to obtain an API key. Here's how you can get one:
+
+1. Visit the [NASA API registration page](https://api.nasa.gov/).
+2. Click on the **"Get API Key"** button.
+3. Sign up for an account (or log in if you already have one).
+4. Once signed in, you’ll be provided with your unique API key.
+5. Copy the API key.
+
 
 ### 4. Launch the Server Locally (Optional)
 
 If you want to run the backend server locally, use the following command:
 
 ```bash
-node server.js
+node index.js
 ```
 
 The server will be available on `http://localhost:5000` by default. 
